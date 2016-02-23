@@ -42,8 +42,9 @@ public class UkFunction {
 		Object newValue = data;
 		if (funList != null && funList.size() > 0) {
 			FunResult funRes = checker.process(data);
+			//不需要函数处理，则返回旧值
 			if (!funRes.isContinue()) {
-				return funRes.getValue();
+				return data;
 			}
 			newValue = funRes.getValue();
 			logger.info("***^_^*** value:{},is function", data);
