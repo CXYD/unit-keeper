@@ -13,7 +13,7 @@
 <br>
 
 ## 工作原理
-![image](https://github.com/liubq100000/liubqresource/blob/master/uk.png)
+![image](https://github.com/liubq100000/liubqresource/blob/master/unit-keeper.png)
 
 ## 开发流程
 * Git clone 代码；
