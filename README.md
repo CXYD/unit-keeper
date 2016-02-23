@@ -1,7 +1,7 @@
 ## 简介
 
 集成DBUnit,XMLUnit和JsonUnit等测试工具，完成DB,Redis,RocketMQ的数据测试和服务的Http请求单元测试<br>
-简化单元测试成本，提高开发和测试的工作效率。
+简化单元测试成本，提高开发和测试人员的工作效率。
 
 ## 特性
 *  可以进行测试用例的DB，Redis，RocketMQ数据准备；
@@ -23,7 +23,7 @@
 ##Demo（数据库测试场景）
 测试功能入口：SimpleXmlTest<br>
 连接对象配置：StockDBConnPool<br>
-建库<br>
+建库语句：<br>
 ```sql
 CREATE DATABASE IF NOT EXISTS testdb DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 ```
