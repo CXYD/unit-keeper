@@ -26,6 +26,7 @@ public class SleepAction implements IAction {
 		int time = 1000 * 60;
 		try {
 			time = Integer.valueOf(param.getParam());
+			Thread.sleep(time);
 		}
 		catch (Exception e) {
 			try {
