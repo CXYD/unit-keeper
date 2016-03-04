@@ -18,9 +18,9 @@ public class JSONVerifier implements IVerifier {
 	 * 验证
 	 */
 	public void valid(String expJsonText, String actJsonText) throws Exception {
-		String expectValueStr = expJsonText.trim();
+		String expectValueStr = expJsonText == null ? "" : expJsonText.trim();
 		logger.info("expJsonText:\r\n{}", expectValueStr);
-		String actValueStr = actJsonText.trim();
+		String actValueStr = actJsonText == null ? "" : actJsonText.trim();
 		logger.info("actJsonText:\r\n{}", actValueStr);
 		JsonAssert.assertJsonEquals(expectValueStr, actValueStr);
 	}
