@@ -21,10 +21,25 @@ public class XMLVerifier implements IVerifier {
 	 * 验证
 	 */
 	public void valid(String expXmlText, String actXmlText) throws Exception {
-		String expectValueStr = UkXmlUtils.formatXmlStr(expXmlText.trim());
-		logger.info("expXmlText:\r\n{}", expectValueStr);
-		String actValueStr = UkXmlUtils.formatXmlStr(actXmlText.trim());
-		logger.info("actXmlText:\r\n{}", actValueStr);
+		String expectValueStr = expXmlText;
+		try {
+			expectValueStr = UkXmlUtils.formatXmlStr(expXmlText.trim());
+			logger.info("expXmlText:\r\n{}", expectValueStr);
+		}
+		catch (Exception ex) {
+			logger.info("expXmlText:\r\n{},非标准的XML格式", expectValueStr, ex);
+			throw ex;
+		}
+		String actValueStr = actXmlText;
+		try {
+			actValueStr = UkXmlUtils.formatXmlStr(actXmlText.trim());
+			logger.info("actXmlText:\r\n{}", actValueStr);
+		}
+		catch (Exception ex) {
+			logger.info("actXmlText:\r\n{},非标准的XML格式", actValueStr, ex);
+			throw ex;
+		}
+
 		XMLUnit.setIgnoreAttributeOrder(true);
 		XMLUnit.setIgnoreComments(true);
 		XMLUnit.setIgnoreWhitespace(true);
