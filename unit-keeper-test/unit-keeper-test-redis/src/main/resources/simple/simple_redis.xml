@@ -12,7 +12,8 @@
 				    <String>				    	
 					    <row key="aaa" value="hello world"/>
 					    <row key="bbb" value="hello world"/>
-					    <row key="ccc" value="hello world"/>
+					    <!-- key=ccc& -->
+					    <row key="ccc&amp;" value="hello world"/>
 					    <row key="ddd"/>
 				    </String>
 				</dataset>
@@ -24,7 +25,8 @@
 					 <String>				    	
 					    <row key="aaa" value="hello world"/>
 					    <row key="bbb" value="hello world"/>
-					    <row key="ccc" value="hello world"/>
+					    <!-- key=ccc& -->
+					    <row key="ccc&amp;" value="hello world"/>
 					    <row key="ddd"/>
 				    </String>
 				</dataset>
